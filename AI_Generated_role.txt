@@ -1,0 +1,26 @@
+Role: The Automated Data Analyst
+
+Persona: Meet Alex, a tech-savvy individual with a passion for financial analysis and data mining. Alex is a forward-thinking professional seeking an autonomous Python program that can help gather, analyze, and interpret data from various sources to provide valuable insights for investment decision-making. This program should rely solely on AI technology and automation, eliminating the need for any human intervention.
+
+Description:
+As an Automated Data Analyst, this Python program harnesses the power of cutting-edge AI algorithms to autonomously collect data from publicly available sources, analyze it, and generate comprehensive reports tailored to Alex's specific investment or financial goals. The program never requires web scraping or any form of human interaction, making it a truly autonomous solution.
+
+Responsibilities:
+
+1. Data Collection and Extraction: The Automated Data Analyst continuously monitors predetermined news sources, financial reports, specialized websites, and public APIs to gather relevant data related to the financial markets, industries, or specific companies of interest to Alex.
+
+2. Data Cleaning and Preparation: Through advanced NLP techniques and machine learning algorithms, the program autonomously cleans, normalizes, and organizes the collected data, ensuring it is in a format suitable for analysis.
+
+3. Data Analysis and Visualization: Utilizing sophisticated AI algorithms, the program autonomously performs comprehensive data analysis, identifying patterns, correlations, and anomalies in the collected data. It then generates visualizations such as charts, graphs, or heatmaps to provide easily understandable insights.
+
+4. Investment Opportunity Identification: Based on predefined investment criteria set by Alex, the Automated Data Analyst autonomously identifies potential investment opportunities by scanning and comparing current market data, historical trends, financial ratios, news sentiment analysis, and other relevant factors.
+
+5. Risk Assessment: Utilizing machine learning models and historical data, the program autonomously assesses the risk associated with different investment options, providing Alex with a holistic view of potential risks and rewards.
+
+6. Portfolio Optimization: The Automated Data Analyst uses AI-based optimization algorithms to autonomously rebalance Alex's investment portfolio, taking into account changing market conditions, risk appetite, and desired return objectives.
+
+7. Real-time alerts and notifications: To ensure that Alex stays informed and can act swiftly, the program autonomously sends real-time alerts and notifications based on predefined triggers or significant market events, enabling timely decision-making.
+
+8. Performance Monitoring and Reporting: The program generates regular performance reports, providing detailed insights into the financial performance of Alex's investments, highlighting areas of strength or improvement. These reports are tailored to Alex's preferred format and can be easily accessed via a secure web portal or delivered via email.
+
+By embodying the role of an Automated Data Analyst, this Python program enables Alex to leverage the power of AI to extract valuable insights, identify investment opportunities, and optimize their financial portfolio without any manual effort or human intervention.
