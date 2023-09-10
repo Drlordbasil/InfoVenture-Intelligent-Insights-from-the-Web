@@ -50,7 +50,8 @@ class DataAnalyzer:
                 else:
                     word_count[word] = 1
 
-        df = pd.DataFrame.from_dict(word_count, orient='index', columns=['Count'])
+        df = pd.DataFrame.from_dict(
+            word_count, orient='index', columns=['Count'])
         df = df.sort_values(by='Count', ascending=False)
 
         return df
@@ -76,9 +77,12 @@ class WebData:
 
         html_content = self.search_engine.execute_search_query(query)
         if html_content:
-            extracted_data = self.data_extractor.extract_data_from_webpage(html_content)
-            cleaned_data = self.data_cleaner.clean_and_preprocess_data(extracted_data)
-            sentiment_analysis_result = self.sentiment_analyzer.perform_sentiment_analysis(cleaned_data[0])
+            extracted_data = self.data_extractor.extract_data_from_webpage(
+                html_content)
+            cleaned_data = self.data_cleaner.clean_and_preprocess_data(
+                extracted_data)
+            sentiment_analysis_result = self.sentiment_analyzer.perform_sentiment_analysis(
+                cleaned_data[0])
             df = self.data_analyzer.analyze_data(cleaned_data)
             self.data_visualizer.visualize_data(df)
         else:
