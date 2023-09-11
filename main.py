@@ -12,9 +12,9 @@ class SearchEngine:
     def execute_search_query(self, query):
         search_url = self.search_engine_url + query
         response = requests.get(search_url)
-        if response.status_code == 200:
-            return response.text
-        return None
+        if response.status_code != 200:
+            raise Exception("Failed to retrieve search results")
+        return response.text
 
 
 class DataExtractor:
@@ -45,10 +45,7 @@ class DataAnalyzer:
         for text in data:
             words = text.split()
             for word in words:
-                if word in word_count:
-                    word_count[word] += 1
-                else:
-                    word_count[word] = 1
+                word_count[word] = word_count.get(word, 0) + 1
 
         df = pd.DataFrame.from_dict(
             word_count, orient='index', columns=['Count'])
@@ -76,17 +73,14 @@ class WebData:
         self.data_visualizer = DataVisualizer()
 
         html_content = self.search_engine.execute_search_query(query)
-        if html_content:
-            extracted_data = self.data_extractor.extract_data_from_webpage(
-                html_content)
-            cleaned_data = self.data_cleaner.clean_and_preprocess_data(
-                extracted_data)
-            sentiment_analysis_result = self.sentiment_analyzer.perform_sentiment_analysis(
-                cleaned_data[0])
-            df = self.data_analyzer.analyze_data(cleaned_data)
-            self.data_visualizer.visualize_data(df)
-        else:
-            print("Failed to retrieve search results")
+        extracted_data = self.data_extractor.extract_data_from_webpage(
+            html_content)
+        cleaned_data = self.data_cleaner.clean_and_preprocess_data(
+            extracted_data)
+        sentiment_analysis_result = self.sentiment_analyzer.perform_sentiment_analysis(
+            cleaned_data[0])
+        df = self.data_analyzer.analyze_data(cleaned_data)
+        self.data_visualizer.visualize_data(df)
 
 
 if __name__ == "__main__":
